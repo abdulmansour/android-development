@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity">
+
+    <EditText
+        android:id="@+id/edit_text_name"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="68dp"
+        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        android:hint="Name"
+        android:imeOptions="actionNext"
+        android:inputType="textPersonName"
+        android:nextFocusDown="@id/edit_text_age"
+        android:singleLine="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.531"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/edit_text_age"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:digits="0123456789"
+        android:hint="Age"
+        android:imeOptions="actionNext"
+        android:inputType="number|phone"
+        android:maxLength="2"
+        app:layout_constraintBottom_toTopOf="@+id/edit_text_id"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_text_name"></EditText>
+
+    <EditText
+        android:id="@+id/edit_text_id"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="144dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:digits="0123456789"
+        android:hint="Student ID"
+        android:imeOptions="actionDone"
+        android:inputType="number|phone"
+        android:maxLength="6"
+        android:nextFocusDown="@id/save_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.531"
+        app:layout_constraintStart_toStartOf="parent"></EditText>
+
+    <Button
+        android:id="@+id/save_button"
+        android:layout_width="250sp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="#58a134"
+        android:text="Save Profile"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.531"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.923" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:textStyle="italic|bold"
+        android:textSize="18sp"
+        android:textColor="#58a134"
+        app:layout_constraintBottom_toTopOf="@+id/edit_text_name"
+        app:layout_constraintStart_toStartOf="@+id/edit_text_name" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Age"
+        android:textStyle="italic|bold"
+        android:textSize="18sp"
+        android:textColor="#58a134"
+        app:layout_constraintBottom_toTopOf="@+id/edit_text_age"
+        app:layout_constraintStart_toStartOf="@+id/edit_text_age" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Student ID"
+        android:textStyle="italic|bold"
+        android:textSize="18sp"
+        android:textColor="#58a134"
+        app:layout_constraintBottom_toTopOf="@+id/edit_text_id"
+        app:layout_constraintStart_toStartOf="@+id/edit_text_id" />
+    <Button
+        android:id="@+id/reset_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"/>
+
+</android.support.constraint.ConstraintLayout>
